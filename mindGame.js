@@ -16,6 +16,18 @@ function mindGame(positiveNum) {
 
 console.log(mindGame(5));
 
+// Input: 5
+
+// Output: 7.5
+
+// Input: 50
+
+// Output: 75
+
+// Input: 33
+
+// Output: 49.5
+
 // to test exceptions
 // 1) put zero and negative number or undefined
 // 2) send more or less than 1 parameter

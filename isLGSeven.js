@@ -1,6 +1,5 @@
 /*
-  Definition: function isLGSeven will subtract it's value by 7. If the result would be less than 7 then the
-  function would return the subtract value. If the result would be more than 7 then the
+  Definition: function isLGSeven will subtract it's value by 7. If the result would be less than 7 then the function would return the subtract value. If the result would be more than 7 then the
   function would return subtract value by multiplying 2 with it.
 
   Exception: Errors would happen if we send certain values as parameters. Such as, Calling the function
@@ -12,7 +11,7 @@
 
 function isLGSeven(number) {
   if (arguments.length === 0 || arguments.length > 1) {
-    return "Error: The function can't accept more than one or less than one parameter.";
+    return "Error: The function can't accept more than one or empty parameter.";
   } else if (!number) {
     return "Error: The function can't accept undefined or empty value";
   } else if (typeof number !== "number") {
@@ -26,7 +25,7 @@ function isLGSeven(number) {
     }
   }
 }
-console.log(isLGSeven("10"));
+console.log(isLGSeven(6));
 
 // Input : 6
 
@@ -38,8 +37,3 @@ console.log(isLGSeven("10"));
 
 // Input: 15
 // Output: 30
-
-// to test exceptions
-// 1) put empty or undefined
-// 2) send more or less than 1 parameter
-// 2) send any type but number

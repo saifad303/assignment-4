@@ -4,9 +4,10 @@
 
   Exception: Errors would happen if we send certain values as parameters. Such as, Calling the function
   1. without sending any parameters.
-  2. send more than or less than 1 parameter.
-  3. Parameters can't be undefined, negative or zero.
+  2. send more than than 1 or empty parameter.
+  3. Parameters can't be undefined.
   4. send parameter of any other type except Array object.
+  5. Each array element should be a number.
 */
 
 function findingBadData(arr) {
@@ -22,13 +23,13 @@ function findingBadData(arr) {
       }
 
       if (element === undefined || typeof element !== "number") {
-        return "Error: array can't contain undefined or any other type. It can only contains number.";
+        return "Error: this array can't contain undefined or any other type. It can only contains number.";
       }
     }
     return countBadNum;
   }
 }
-console.log(findingBadData([2, -5, -7, "undefined"]));
+console.log(findingBadData([1, 2, 3, 4]));
 
 // Input: [ 1,2,5 ]
 
@@ -41,9 +42,3 @@ console.log(findingBadData([2, -5, -7, "undefined"]));
 // Input: [ -4, -9, -5, -33, -55 ]
 
 // Output: 5
-
-// to test exceptions
-// 1) put zero and negative number or undefined
-// 2) send more or less than 1 parameter
-// 2) send any type but array
-//inert undefined, string in array

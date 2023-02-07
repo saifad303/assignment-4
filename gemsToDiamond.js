@@ -1,25 +1,25 @@
 /*
-  Definition: function gemsToDiamond will take 3 parameter and multiply each value by 21, 32, 43 sequentially and stores it in totalDiamond. If totalDiamond will be greater than 2000, the function will return the 
+  Definition: function gemsToDiamond will take 3 parameter and multiply each value by 21, 32, 43 sequentially, and stores the sum of all into totalDiamond. If totalDiamond will be greater than 2000, the function will return the 
   totalDiamond which would be decreased by 2000. If it is less than 2000, then the function will return only the subtracted value.
 
   Exception: Errors would happen if we send certain values as parameters. Such as, Calling the function
   1. without sending any parameters.
   2. send more than or less than 3 parameter.
-  3. Parameters can't be undefined, negative or zero.
+  3. Parameters can't be undefined.
   4. send parameter of any other type except Number.
 */
 
 function gemsToDiamond(p1, p2, p3) {
   if (arguments.length === 0 || arguments.length > 3 || arguments.length < 3) {
-    return "Error: This function can't accept more than three or less than three parameters.";
+    return "Error: The function can't accepts more than three or less than three parameters.";
   } else if (
     typeof p1 !== "number" ||
     typeof p2 !== "number" ||
     typeof p3 !== "number"
   ) {
-    return "Error: This function only accept number.";
-  } else if (!p1 || !p2 || !p3 || p1 <= 0 || p2 <= 0 || p3 <= 0) {
-    return "Error: This function can't accept undefined, negative or zero value as parameters.";
+    return "Error: The function only accepts number.";
+  } else if (!p1 || !p2 || !p3) {
+    return "Error: The function can't accept undefined value as parameters.";
   } else {
     let totalDiamond = p1 * 21 + p2 * 32 + p3 * 43;
     if (totalDiamond > 2000) {
@@ -30,7 +30,7 @@ function gemsToDiamond(p1, p2, p3) {
   }
 }
 
-console.log(gemsToDiamond(100, 5, 1));
+console.log(gemsToDiamond(1, 1, 1));
 
 // Input: 1, 1, 1
 

@@ -1,3 +1,14 @@
+/*
+  Definition: function gemsToDiamond will take 3 parameter and multiply each value by 21, 32, 43 sequentially and stores it in totalDiamond. If totalDiamond will be greater than 2000, the function will return the 
+  totalDiamond which would be decreased by 2000. If it is less than 2000, then the function will return only the subtracted value.
+
+  Exception: Errors would happen if we send certain values as parameters. Such as, Calling the function
+  1. without sending any parameters.
+  2. send more than or less than 3 parameter.
+  3. Parameters can't be undefined, negative or zero.
+  4. send parameter of any other type except Number.
+*/
+
 function gemsToDiamond(p1, p2, p3) {
   if (arguments.length === 0 || arguments.length > 3 || arguments.length < 3) {
     return "Error: This function can't accept more than three or less than three parameters.";

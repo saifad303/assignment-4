@@ -1,3 +1,12 @@
+/*
+  Definition: function evenOdd will take 1 parameter as string, and count the number of characters that the string has. If the string has odd number of characters then the function will return odd. If the string has even number of characters then the function will return even.
+
+  Exception: Errors would happen if we send certain values as parameters. Such as, Calling the function
+  1. without sending any parameters.
+  2. send more than one parameter.
+  3. Parameters can't be undefined.
+  4. send parameter of any other type except string.
+*/
 function evenOdd(str) {
   if (arguments.length === 0 || arguments.length > 1) {
     return "Error: This function can't accept empty or more than one parameter.";

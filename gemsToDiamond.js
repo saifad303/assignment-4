@@ -43,11 +43,3 @@ console.log(gemsToDiamond(1, 1, 1));
 // Input: 100, 5, 1
 
 // Output: 303
-
-// my test for exception
-/*
-input:
-1) call empty arg fun, less or more than three values
-2) call with 0, undefined or negative number.
-3) call with any type but number.
-*/
